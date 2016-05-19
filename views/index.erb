@@ -1,0 +1,16 @@
+<% if @vary == 0 %>
+  <h2>Artists</h2>
+  <% @artists.each do |artist| %>
+    <b>Name:</b>
+    <p><a href="/artists/<%= artist.id %>"><%= artist.name %></a></p>
+    <hr>
+  <% end %>
+<% end %>
+<% if @vary == 1%>
+  <h2>Albums</h2>
+  <% @albums.each do |album| %>
+    <b>Name:</b>
+    <p><a href="/albums/<%= album.id %>"><%= album.name %></a></p>
+    <hr>
+  <% end %>
+<% end %>
